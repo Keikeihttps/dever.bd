@@ -230,4 +230,44 @@ values('Petrópolis', 1, '2025-06-20 00:00:00'),
 	  ('Lisboa', 2, '2025-06-20 00:00:00');
 	  
 insert into endereco (endereco, endereco_dois, distrito, cidade_id, cep, celular, ultima_atualizacao)
-values('Rua Varls','Rua Carls','Distrito Lars', 1,'12345678','1234567890124', '2025-06-20 00:00:00')
+values('Rua Varls','Rua Carls','Distrito Lars', 1,'12345678','1234567890124', '2025-06-20 00:00:00');
+
+insert into categoria (nome, ultima_atualizacao)
+values ('terror', '2025-06-20 00:00:00');
+
+insert into lingua (nome, ultima_atualizacao)
+values ('portugues', '2025-06-20 00:00:00');
+
+insert into ator (primeiro_nome, ultimo_nome ,ultima_atualizacao)
+values ('roberto', 'maiworm', '2025-06-20 00:00:00');
+
+insert into filme (titulo , descricao, ano_lancamento, lingua_id, duracao_aluguel, aluguel_preco, duracao, multa, class_indicativa, ultima_atualizacao)
+values ('Longlegs', 'aaaaaaaaaaaaaaaaaaaaaaa', '2025-02-21', '1', '2025-06-29', 44.99, '2828282', 39.30, '23', '2025-06-20 00:00:00');
+
+insert into funcionario (primeiro_nome, ultimo_nome, endereco_id, email, loja_id, ativo, username, senha, ultima_atualizacao, foto)
+values ('mai', 'maimai', '1', 'hshdhdfrjrskjrek', null, true, 'dsjkfdj', 'ksksks', now(), null);
+
+insert into loja (funcionario_id, endereco_id, ultima_atualizacao)
+values (null, '1', now());
+
+select * from funcionario f ;
+
+insert into estoque (filme_id, loja_id, ultima_atualizacao)
+values ('1', null, now());
+
+insert into filme_categoria (filme_id, categoria_id, ultima_atualizacao)
+values ( null, '1', now());
+
+insert into ator_filme (ator_id, filme_id, ultima_atualizacao)
+values ('1', null, now());
+
+insert into cliente(loja_id, primeiro_nome, ultimo_nome, email, endereco_id, ativo, data_criacao, ultima_atualizacao)
+values (null, 'lipe', 'chuchu', 'lilipe@gmail', '1', true, '2025-06-29', now());
+
+insert into aluguel (data_aluguel, estoque_id, cliente_id, data_devolucao, funcionario_id, ultima_atualizacao)
+values (now(), '1', '1', '2025-07-01', 4 , now());
+
+select * from aluguel f;
+
+insert into pagamento (cliente_id, funcionario_id, aluguel_id, preco, data_pagamento)
+values ('1', 4, 5 , 66.66, '2025-07-01')
